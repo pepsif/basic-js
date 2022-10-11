@@ -16,19 +16,22 @@
 Your task is to write several functions that are the solution to the subtasks. Subtasks descriptions, as well as instructions on how to run tests and submit solutions are below.
  */
 function countCats( backyard ) {
- 
   const arr = backyard;
   let countCat = 0;
   
-  let findCatEl = arr.forEach( el => {
-   if( el.includes('^^') ) { 
-     countCat++;
-     console.log('catch ' + countCat) }
+  let findCatEl = arr.forEach( arr => {
+      arr.forEach( element => {
+        
+        if(element === "^^") {
+           countCat++
+         } 
+    
+      });
+    if(countCat === 0 ) { return 0 }
   });
-  if(countCat === 0 ) { return 0 }
-  
-     return countCat
-}
+ 
+    return countCat
+  }
 
 module.exports = {
   countCats
